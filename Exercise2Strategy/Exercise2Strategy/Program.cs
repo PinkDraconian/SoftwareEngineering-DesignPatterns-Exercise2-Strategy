@@ -7,6 +7,15 @@ namespace Exercise2Strategy
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+
+            Remote remote = new Remote
+            {
+                JoystickBehavior = new LeftHandedJoyStickBehavior(),
+                ButtonBehavior = new ButtonBehavior()
+            };
+
+            remote.PressButton();
+            remote.PressUpButton();
         }
     }
 }
